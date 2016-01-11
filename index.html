@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Revealator Plugin</title>
+	<link rel="stylesheet" href="fm.revealator.jquery.css">
+	<style>
+		body {
+			font-family: sans-serif;
+			margin: 0;
+		}
+		.section {
+			padding: 2rem;
+			height: 30rem;
+			position: relative;
+		}
+		.section:nth-child(2n+2) {
+			background-color: #eee;
+		}
+		.section .label {
+			position: absolute;
+			padding: .375rem;
+			box-sizing: border-box;
+			color: #999;
+			border: 1px solid #999;
+			top: 0;
+			left: 2rem;
+			background-color: #fff;
+			height: 2rem;
+		}
+		*[class^="revealator"] {
+			height: 15rem;
+			width: 20rem;
+			border: 1px solid #999;
+			background-color: rgba(0,0,0,.1);
+			margin: 0 auto;
+		}
+	</style>
+	<script src="jquery-1.11.3.min.js"></script>
+	<script src="fm.revealator.jquery.js"></script>
+</head>
+<body>
+	<div class="section" style="height: 1000px">
+		<h1>
+			Scroll down ↓↓↓
+		</h1>
+	</div>
+	<div class="section">
+		<div class="label">
+			revealator-skewright
+		</div>
+		<div class="revealator-skewright">
+			Imma skew this to the right
+		</div>
+	</div>
+	<div class="section">
+		<div class="label">
+			revealator-slideup
+		</div>
+		<div class="revealator-slideup">
+			Imma slide this in
+		</div>
+	</div>
+	<div class="section">
+		<div class="label">
+			revealator-slideleft
+		</div>
+		<div class="revealator-slideleft">
+			Imma slide this in from right to left
+		</div>
+	</div>
+	<div class="section">
+		<div class="label">
+			revealator-slideright
+		</div>
+		<div class="revealator-slideright">
+			Imma slide this in from left to right
+		</div>
+	</div>
+	<div class="section">
+		<div class="label">
+			revealator-zoomin (revealator-delay1 revealator-delay2 revealator-delay3)
+		</div>
+		<div style="text-align: center">
+			<div class="revealator-zoomin" style="display: inline-block;">
+				Imma zoom this in
+			</div>
+			<div class="revealator-zoomin revealator-delay1" style="display: inline-block;">
+				Imma zoom this in
+			</div>
+			<div class="revealator-zoomin revealator-delay2" style="display: inline-block;">
+				Imma zoom this in
+			</div>
+			<div class="revealator-zoomin revealator-delay3" style="display: inline-block;">
+				Imma zoom this in
+			</div>
+		</div>
+	</div>
+	<div class="section">
+		<div class="label">
+			revealator-zoomout
+		</div>
+		<div class="revealator-zoomout">
+			Imma zoom this out
+		</div>
+	</div>
+	<div class="section">
+		<div class="label">
+			revealator-fade (revealator-duration10)
+		</div>
+		<div class="revealator-fade revealator-duration10">
+			Imma fade this in
+		</div>
+	</div>
+	<div class="section">
+		<div class="label">
+			revealator-rotateleft
+		</div>
+		<div class="revealator-rotateleft">
+			Imma rotate this in to the left
+		</div>
+	</div>
+	<div class="section">
+		<div class="label">
+			revealator-rotateright
+		</div>
+		<div class="revealator-rotateright">
+			Imma slide this in to the right
+		</div>
+	</div>
+	<div class="section">
+		<div class="label">
+			End
+		</div>
+	</div>
+</body>
+</html>
