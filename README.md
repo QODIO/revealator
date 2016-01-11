@@ -15,11 +15,11 @@ Usage
 
 ###### example on usage:
 ```html
-<div class="revealator revealator-zoomin">
+<div class="revealator-zoomin">
 	Some text or elements
 </div>
 
-<div class="revealator revealator-fadein revealator-slideup revealator-delay2 revealator-duration5">
+<div class="revealator-fadein revealator-slideup revealator-delay2 revealator-duration5">
 	Some text or elements
 </div>
 ```
@@ -69,6 +69,7 @@ revealator-duration3 | Set effect duration to 300ms
 ...                  | ...
 revealator-duration19 | Set effect duration to 1900ms
 revealator-duration20 | Set effect duration to 2000ms
+You can also use revealator-speed##
 
 ##### Custom effects:
 You can also easily make your own animations, e.g. (`revealator-` is optional):
