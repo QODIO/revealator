@@ -38,7 +38,7 @@ $(function () {
 		var i = 0;
 		var window_top = 0;
 		var window_bottom = $window.height();
-		$('*[class^="revealator"]').each(function () {
+		$('*[class*="revealator"]').each(function () {
 			i++;
 			var element = this;
 			var $element = $(element);

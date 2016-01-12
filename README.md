@@ -53,20 +53,20 @@ revealator-zoomout     | Zoom out and fade in element
 ##### Delays:
 Class | Description
 --- | ---
-revealator-delay1 | Set effect delay to 100ms
-revealator-delay2 | Set effect delay to 200ms
-revealator-delay3 | Set effect delay to 300ms
-...                  | ...
+revealator-delay1  | Set effect delay to 100ms
+revealator-delay2  | Set effect delay to 200ms
+revealator-delay3  | Set effect delay to 300ms
+...                | ...
 revealator-delay19 | Set effect delay to 1900ms
 revealator-delay20 | Set effect delay to 2000ms
 
 ##### Durations:
 Class | Description
 --- | ---
-revealator-duration1 | Set effect duration to 100ms
-revealator-duration2 | Set effect duration to 200ms
-revealator-duration3 | Set effect duration to 300ms
-...                  | ...
+revealator-duration1  | Set effect duration to 100ms
+revealator-duration2  | Set effect duration to 200ms
+revealator-duration3  | Set effect duration to 300ms
+...                   | ...
 revealator-duration19 | Set effect duration to 1900ms
 revealator-duration20 | Set effect duration to 2000ms
 You can also use revealator-speed##
