@@ -13,6 +13,7 @@
 			padding: 2rem;
 			height: 30rem;
 			position: relative;
+			text-align: center;
 		}
 		.section:nth-child(2n+2) {
 			background-color: #eee;
@@ -34,6 +35,7 @@
 			border: 1px solid #999;
 			background-color: rgba(0,0,0,.1);
 			margin: 0 auto;
+			display: inline-block;
 		}
 	</style>
 	<script src="jquery-1.11.3.min.js"></script>
@@ -47,84 +49,137 @@
 	</div>
 	<div class="section">
 		<div class="label">
-			revealator-skewright
-		</div>
-		<div class="revealator-skewright">
-			Imma skew this to the right
-		</div>
-	</div>
-	<div class="section">
-		<div class="label">
-			revealator-slideup
+			revealator-slideup revealator-delay#
 		</div>
 		<div class="revealator-slideup">
+			Imma slide this in
+		</div>
+		<div class="revealator-slideup revealator-delay1">
+			Imma slide this in
+		</div>
+		<div class="revealator-slideup revealator-delay2">
+			Imma slide this in
+		</div>
+		<div class="revealator-slideup revealator-delay3">
 			Imma slide this in
 		</div>
 	</div>
 	<div class="section">
 		<div class="label">
-			revealator-slideleft
+			revealator-slideleft revealator-delay#
 		</div>
 		<div class="revealator-slideleft">
+			Imma slide this in from right to left
+		</div>
+		<div class="revealator-slideleft revealator-delay2">
+			Imma slide this in from right to left
+		</div>
+		<div class="revealator-slideleft revealator-delay4">
+			Imma slide this in from right to left
+		</div>
+		<div class="revealator-slideleft revealator-delay6">
 			Imma slide this in from right to left
 		</div>
 	</div>
 	<div class="section">
 		<div class="label">
-			revealator-slideright
+			revealator-slideright revealator-delay#
 		</div>
 		<div class="revealator-slideright">
+			Imma slide this in from left to right
+		</div>
+		<div class="revealator-slideright revealator-delay2">
+			Imma slide this in from left to right
+		</div>
+		<div class="revealator-slideright revealator-delay4">
+			Imma slide this in from left to right
+		</div>
+		<div class="revealator-slideright revealator-delay6">
 			Imma slide this in from left to right
 		</div>
 	</div>
 	<div class="section">
 		<div class="label">
-			revealator-zoomin (revealator-delay1 revealator-delay2 revealator-delay3)
+			revealator-zoomin revealator-delay#
 		</div>
-		<div style="text-align: center">
-			<div class="revealator-zoomin" style="display: inline-block;">
-				Imma zoom this in
-			</div>
-			<div class="revealator-zoomin revealator-delay1" style="display: inline-block;">
-				Imma zoom this in
-			</div>
-			<div class="revealator-zoomin revealator-delay2" style="display: inline-block;">
-				Imma zoom this in
-			</div>
-			<div class="revealator-zoomin revealator-delay3" style="display: inline-block;">
-				Imma zoom this in
-			</div>
+		<div class="revealator-zoomin">
+			Imma zoom this in
+		</div>
+		<div class="revealator-zoomin revealator-delay1">
+			Imma zoom this in
+		</div>
+		<div class="revealator-zoomin revealator-delay2">
+			Imma zoom this in
+		</div>
+		<div class="revealator-zoomin revealator-delay3">
+			Imma zoom this in
 		</div>
 	</div>
 	<div class="section">
 		<div class="label">
-			revealator-zoomout
+			revealator-zoomout revealator-delay#
 		</div>
 		<div class="revealator-zoomout">
+			Imma zoom this out
+		</div>
+		<div class="revealator-zoomout revealator-delay1">
+			Imma zoom this out
+		</div>
+		<div class="revealator-zoomout revealator-delay2">
+			Imma zoom this out
+		</div>
+		<div class="revealator-zoomout revealator-delay3">
 			Imma zoom this out
 		</div>
 	</div>
 	<div class="section">
 		<div class="label">
-			revealator-fade (revealator-duration10)
+			revealator-fade revealator-delay# revealator-duration10
 		</div>
 		<div class="revealator-fade revealator-duration10">
+			Imma fade this in
+		</div>
+		<div class="revealator-fade revealator-delay2 revealator-duration10">
+			Imma fade this in
+		</div>
+		<div class="revealator-fade revealator-delay4 revealator-duration10">
+			Imma fade this in
+		</div>
+		<div class="revealator-fade revealator-delay6 revealator-duration10">
 			Imma fade this in
 		</div>
 	</div>
 	<div class="section">
 		<div class="label">
-			revealator-rotateleft
+			revealator-rotateleft revealator-delay#
 		</div>
 		<div class="revealator-rotateleft">
+			Imma rotate this in to the left
+		</div>
+		<div class="revealator-rotateleft revealator-delay1">
+			Imma rotate this in to the left
+		</div>
+		<div class="revealator-rotateleft revealator-delay2">
+			Imma rotate this in to the left
+		</div>
+		<div class="revealator-rotateleft revealator-delay3">
 			Imma rotate this in to the left
 		</div>
 	</div>
 	<div class="section">
 		<div class="label">
-			revealator-rotateright
+			revealator-rotateright revealator-delay#
 		</div>
 		<div class="revealator-rotateright">
+			Imma slide this in to the right
+		</div>
+		<div class="revealator-rotateright revealator-delay1">
+			Imma slide this in to the right
+		</div>
+		<div class="revealator-rotateright revealator-delay2">
+			Imma slide this in to the right
+		</div>
+		<div class="revealator-rotateright revealator-delay3">
 			Imma slide this in to the right
 		</div>
 	</div>
