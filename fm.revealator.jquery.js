@@ -58,8 +58,10 @@ $(function () {
 			}
 
 			if (!$element.hasClass(position_class)) {
-				$element.removeClass('revealator-below revealator-partially-below revealator-partially-above revealator-above revealator-within');
-				$element.addClass(position_class);
+				if (!$element.hasClass('revealator-once') || ($element.hasClass('revealator-once') && !$element.hasClass('revealator-within'))) {
+					$element.removeClass('revealator-below revealator-partially-below revealator-within revealator-partially-above revealator-above');
+					$element.addClass(position_class);
+				}
 			}
 		});
 	};

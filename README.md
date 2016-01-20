@@ -19,7 +19,7 @@ Usage
 	Some text or elements
 </div>
 
-<div class="revealator-fadein revealator-slideup revealator-delay2 revealator-duration5">
+<div class="revealator-fadein revealator-slideup revealator-once revealator-delay2 revealator-duration5">
 	Some text or elements
 </div>
 ```
@@ -34,6 +34,9 @@ revealator-position-partially-below | The top of the element is inside window vi
 revealator-position-within          | The element is within the window view
 revealator-position-partially-above | The top of the element is outside window view, but the bottom of the element is inside window view
 revealator-position-above           | Both the top and the bottom the element are above the window view
+
+##### Only show the effect once
+By adding the class `revealator-once`, the effect will only fire once. The plugin will lock to the position to `revealator-position-within`.
 
 #### Default styles:
 The included stylesheet has some default css classes

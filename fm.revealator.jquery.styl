@@ -119,23 +119,16 @@
 		transform rotate(0deg)
 		opacity 1
 		
-.revealator-skewright
-	transform skew(35deg, 0deg)
-	opacity 0
-	transition all 600ms
-	&.revealator-within
-	&.revealator-partially-above
-	&.revealator-above
-		transform skew(0deg, 0deg)
-		opacity 1
-
 	
 // Delay
-for i in 1..20
+for i in 1..30
 	.revealator-delay{i}
 		transition-delay: i * 100ms !important
+		&.revealator-below
+		&.revealator-partially-below
+			transition-delay: 0ms !important
 // Speed
-for i in 1..20
+for i in 1..30
 	.revealator-speed{i}
 	.revealator-duration{i}
 		transition-duration: i * 100ms !important
