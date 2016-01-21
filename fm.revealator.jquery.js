@@ -58,13 +58,21 @@ $(function () {
 				position_class = 'revealator-within';
 			}
 
-			if ($element.hasClass('revealator-load')) {
+			if ($element.hasClass('revealator-load') && !$element.hasClass('revealator-within')) {
 				$element.removeClass('revealator-below revealator-partially-below revealator-within revealator-partially-above revealator-above');
 				$element.addClass('revealator-within');
 			}
 
 			if (!$element.hasClass(position_class) && !$element.hasClass('revealator-load')) {
-				if (!$element.hasClass('revealator-once') || ($element.hasClass('revealator-once') && !$element.hasClass('revealator-within'))) {
+				if ($element.hasClass('revealator-once')) {
+					if (!$element.hasClass('revealator-within')) {
+						$element.removeClass('revealator-below revealator-partially-below revealator-within revealator-partially-above revealator-above');
+						$element.addClass(position_class);
+					}
+					if ($element.hasClass('revealator-partially-above') || $element.hasClass('revealator-above')) {
+						$element.addClass('revealator-within');
+					}
+				} else {
 					$element.removeClass('revealator-below revealator-partially-below revealator-within revealator-partially-above revealator-above');
 					$element.addClass(position_class);
 				}
