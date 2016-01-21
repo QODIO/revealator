@@ -24,7 +24,7 @@ Usage
 </div>
 ```
 
-#### Classes added:
+### Classes added:
 The plugin adds classes to the elements depending on their position
 
 Class | Description
@@ -38,7 +38,10 @@ revealator-position-above           | Both the top and the bottom the element ar
 ##### Only show the effect once
 By adding the class `revealator-once`, the effect will only fire once. The plugin will lock to the position to `revealator-position-within`.
 
-#### Default styles:
+##### Only show the effect on load
+By adding the class `revealator-load`, the effect will only fire on load.
+
+### Default effects, delays and durations:
 The included stylesheet has some default css classes
 
 ##### Effects:

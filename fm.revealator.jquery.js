@@ -1,7 +1,7 @@
 /*
  Revealator jQuery Plugin
  Revealator is a jQuery-based plugin for adding effects to elements that enter the window. It's simple, and easy to use.
- version 1.0, Jan 11th, 2016
+ version 1.2, Jan 11th, 2016
  by Ingi P. Jacobsen
 
  The MIT License (MIT)
@@ -27,13 +27,14 @@
  SOFTWARE.
  */
 
-window.Revealator = {
+Revealator = {
 	timer: null,
-	busy: false
+	busy: false,
+	refresh: function () {}
 };
 
 $(function () {
-	var refreshRevealator = function () {
+	Revealator.refresh = function () {
 		var $window = $(window);
 		var i = 0;
 		var window_top = 0;
@@ -57,7 +58,12 @@ $(function () {
 				position_class = 'revealator-within';
 			}
 
-			if (!$element.hasClass(position_class)) {
+			if ($element.hasClass('revealator-load')) {
+				$element.removeClass('revealator-below revealator-partially-below revealator-within revealator-partially-above revealator-above');
+				$element.addClass('revealator-within');
+			}
+
+			if (!$element.hasClass(position_class) && !$element.hasClass('revealator-load')) {
 				if (!$element.hasClass('revealator-once') || ($element.hasClass('revealator-once') && !$element.hasClass('revealator-within'))) {
 					$element.removeClass('revealator-below revealator-partially-below revealator-within revealator-partially-above revealator-above');
 					$element.addClass(position_class);
@@ -67,11 +73,11 @@ $(function () {
 	};
 
 	$(window).bind('scroll resize load ready', function () {
-		if (!window.Revealator.busy) {
-			window.Revealator.busy = true;
+		if (!Revealator.busy) {
+			Revealator.busy = true;
 			setTimeout(function () {
-				window.Revealator.busy = false;
-				refreshRevealator();
+				Revealator.busy = false;
+				Revealator.refresh();
 			}, 150);
 		}
 	});
