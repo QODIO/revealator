@@ -28,10 +28,14 @@ Usage
 You can set these global options for the plugin
 ```javascript
 // Sets the padding of the scroll position, if within this area, the classes `near-top`/`near-bottom` are added.
-Revealator.scroll_padding = '100';
+<script type="text/javascript">
+	Revealator.scroll_padding = '100';
+</script>
 
 // Sets the top and bottom offsets at which the effects are triggered.
-Revealator.effects_padding = '-100';
+<script type="text/javascript">
+	Revealator.effects_padding = '-100';
+</script>
 ```
 
 ### Classes added (to elements):
