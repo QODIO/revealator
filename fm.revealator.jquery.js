@@ -30,15 +30,44 @@
 Revealator = {
 	timer: null,
 	busy: false,
+	scroll_padding: 100,
+	effects_padding: -100,
 	refresh: function () {}
 };
 
 $(function () {
 	Revealator.refresh = function () {
 		var $window = $(window);
+		var $document = $(document);
+		var $body = $(document.body);
 		var i = 0;
-		var window_top = 0;
-		var window_bottom = $window.height();
+		var window_top = Revealator.effects_padding;
+		var window_bottom = $window.height() - Revealator.effects_padding;
+		var document_top = Revealator.scroll_padding;
+		var document_bottom = $document.height() - Revealator.scroll_padding;
+		
+		if ($window.scrollTop() === 0) {
+			if (!$body.hasClass('at-top')) {
+				$body.addClass('at-top').removeClass('at-bottom').removeClass('near-top').removeClass('near-bottom');
+			}
+		} else if ($window.scrollTop() + $window.height() === $document.height()) {
+			if (!$body.hasClass('at-bottom')) {
+				$body.addClass('at-bottom').removeClass('at-top').removeClass('near-top').removeClass('near-bottom');
+			}
+		} else if ($window.scrollTop() <= document_top) {
+			if (!$body.hasClass('near-top')) {
+				$body.addClass('near-top').removeClass('near-bottom').removeClass('at-top').removeClass('at-bottom');
+			}
+		} else if ($window.scrollTop() + $window.height() >= document_bottom) {
+			if (!$body.hasClass('near-bottom')) {
+				$body.addClass('near-bottom').removeClass('near-top').removeClass('at-top').removeClass('at-bottom');
+			}
+		} else {
+			if ($body.hasClass('at-top') || $body.hasClass('at-bottom') || $body.hasClass('near-top') || $body.hasClass('near-bottom')) {
+				$body.removeClass('at-top').removeClass('at-bottom').removeClass('near-top').removeClass('near-bottom');
+			}
+		}
+		
 		$('*[class*="revealator"]').each(function () {
 			i++;
 			var element = this;
