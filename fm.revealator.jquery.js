@@ -1,7 +1,7 @@
 /*
  Revealator jQuery Plugin
  Revealator is a jQuery-based plugin for adding effects to elements that enter the window. It's simple, and easy to use.
- version 1.3, Jan 11th, 2016
+ version 1.4, Jan 11th, 2016
  by Ingi P. Jacobsen
 
  The MIT License (MIT)
@@ -27,15 +27,18 @@
  SOFTWARE.
  */
 
-Revealator = {
-	timer: null,
-	busy: false,
-	scroll_padding: 0,
-	effects_padding: 0,
-	refresh: function () {}
-};
+
+var Revealator = typeof Revealator !== 'undefined' ? Revealator : {};
 
 $(function () {
+	Revealator = $.extend({}, {
+		timer:           null,
+		busy:            false,
+		scroll_padding:  0,
+		effects_padding: 0,
+		refresh:         function () {}
+	}, typeof Revealator !== 'undefined' ? Revealator : {});
+
 	Revealator.refresh = function () {
 		var $window = $(window);
 		var $document = $(document);
