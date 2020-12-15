@@ -1,3 +1,6 @@
+DEPRECATED - no longer actively maintained
+==========================================
+
 Revealator
 =======
 Revealator is a jQuery-based plugin for adding effects to elements that enter the window. It's simple, and easy to use. It also adds classes to the body tag to depending on the users scroll position in the document, e.g. `at-top`, `at-bottom`, `near-top`, `near-bottom`.
